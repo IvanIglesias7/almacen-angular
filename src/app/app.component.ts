@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ListadoDeProductosComponent } from './listado-de-productos/listado-de-productos.component';
 
 @Component({
   selector: 'app-root',
@@ -8,3 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Almacen';
 }
+
+
+
+

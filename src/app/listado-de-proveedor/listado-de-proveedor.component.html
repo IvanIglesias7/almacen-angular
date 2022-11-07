@@ -1,0 +1,18 @@
+<h2>Proveedor</h2>
+<ul class="proveedor">
+    <li *ngFor="let proveedor of proveedores">
+    <button [class.selected]="proveedor === proveedorSeleccionado" type="button" (click)="onSelect(proveedor)">
+      <span class="badge">{{proveedor.id}}</span>
+      <span class="name">{{proveedor.nombre}}</span>
+    </button>
+  </li>
+</ul>
+
+<div *ngIf="proveedorSeleccionado">
+    <h2>{{proveedorSeleccionado.nombre | uppercase}} Detalles</h2>
+    <div>ID: {{proveedorSeleccionado.id}}</div>
+    <div>Nombre: {{proveedorSeleccionado.nombre}}</div>
+    <div>Contacto: {{proveedorSeleccionado.contacto}} euros </div>
+    <div>Direccion: {{proveedorSeleccionado.direccion}}</div>
+    <div>Medio: {{proveedorSeleccionado.medio}}</div>
+  </div>
